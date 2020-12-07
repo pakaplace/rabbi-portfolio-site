@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preston D Neimeiser</title>
+  <meta name="author" content="Parker Plcae">
+  <meta name="description" content="">
+
+  <!-- Tailwind -->
+  <!-- <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> -->
+  <link href="./tailwind.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700;800&display=swap');
+
+    .font-header {
+      font-family: spectral;
+    }
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+    p {
+      font-family: karla;
+    }
+  </style>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+  <!-- PDF Viewer -->
+  <script src="./js/pdfObject.js"></script>
+  <style>
+    .pdfobject-container {
+      width: 100%;
+      height: 16rem;
+      border: 1rem solid rgba(0, 0, 0, .1);
+    }
+  </style>
+
+  <!-- AlpineJS -->
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <!-- Font Awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="s
+        ha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous">
+        </script>
+</head>
+
+<body class="bg-white font-family-karla">
+
+  <!-- Top Bar Nav -->
+  <nav class="w-full py-4 bg-blue-800 shadow">
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
+
+      <nav>
+        <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
+          <li><a class="hover:text-gray-200 hover:underline px-4" href="./index.html">Home</a></li>
+          <!-- <li><a class="hover:text-gray-200 hover:underline px-4" href="#">About</a></li> -->
+        </ul>
+      </nav>
+
+      <div class="flex items-center text-lg no-underline text-white pr-6">
+        <!-- <a class="pl-6" href="#">
+                    <i class="fab fa-instagram"></i>
+                </a> -->
+        <a class="pl-6" href="https://twitter.com/prestoneimeiser">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a class="pl-6" href="https://www.linkedin.com/in/preston-neimeiser-986810107">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+
+  </nav>
+
+  <!-- Text Header -->
+  <!-- style="
+    background-image: url('./media/marching-guitar.jpg');
+    width: 100%;
+  " -->
+  <header class="w-full container mx-auto">
+    <div class="flex flex-col items-center justify-center py-6 px-2">
+      <a class="font-header font-bold text-gray-800 capitalize text-center text-5xl" href="#">
+        Preston D. Neimeiser
+      </a>
+      <p class="text-center text-lg text-gray-600">
+        Shalom! I'm Preston, a rabbi working at Johns Hopkins Hillel in Baltimore, MD and living in Washington,
+        DC.
+      </p>
+    </div>
+  </header>
+
+  <!-- Topic Nav -->
+  <nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
+    <div class="block sm:hidden">
+      <a href="#" class="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
+        @click="open = !open">
+        Home <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
+      </a>
+    </div>
+    <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+      <div
+        class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm uppercase mt-0 px-6 py-2">
+        <a href="https://preston-d.s3.amazonaws.com/Preston-Neimeiser-Vision-Statement.pdf" target="_blank"
+          class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Resume</a>
+        <a href="https://preston-d.s3.amazonaws.com/Preston-Neimeiser-Vision-Statement.pdf" target="_blank"
+          class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Vision</a>
+        <a href="./sermons.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Sermons</a>
+        <a href="./lesson-plans.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Lesson Plans</a>
+        <a href="./press-writings.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2 font-bold">Press/Writings</a>
+        <a href="./contact.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Contact Preston</a>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  <div class="container mx-auto flex flex-wrap py-6">
+
+    <!-- Content Section REPLACE -->
+    <section class="w-full md:w-2/3 flex flex-col items-center px-3">
+      <article class="flex flex-col shadow my-4 w-full">
+        <!-- <div href="#" class="hover:opacity-75">
+          <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">
+        </a> -->
+        <div id='faith-leader-11-20'></div>
+        <div class="bg-white flex flex-col justify-start p-6">
+          <p href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">Writing</p>
+          <p href="#" class="text-3xl font-bold pb-4">Faith Leader Newsletter</p>
+          <p href="#" class="text-sm pb-3">
+            <b>New Sanctuary Coalition</b>,
+          </p>
+          <p href="#" class="pb-6">New Sanctuary Coalition bi-weekly newsletter following the 2020 election and
+            articulating a vision forward for immigration advocacy. </p>
+          <button onClick="window.open('./pdf/faith-leader-11-20.pdf');"
+            class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
+            View or Print PDF <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+      </article>
+      <article class="flex flex-col shadow my-4 w-full">
+        <div href="#" class="hover:opacity-75">
+          <img class="h-64 object-contain" src="https://preston-d.s3.amazonaws.com/bpe.jpeg">
+          </a>
+          <div class="bg-white flex flex-col justify-start p-6">
+            <p href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">Writing</p>
+            <p href="#" class="text-3xl font-bold pb-4">Baltimore Post Examiner: Spirituality Series
+              (x4)</p>
+            <p href="#" class="text-sm pb-3">
+              <b>Baltimore Post Examiner</b>,
+              Delivered on March 2018
+            </p>
+            <p href="#" class="pb-6">Various writings published in the “Spirituality series” wherein <i>spiritual
+                teachers
+                share insights from the ages along with words of comfort and encouragement. </i>
+            </p>
+            <button onClick="window.open('https://baltimorepostexaminer.com/author/preston-neimeiser');"
+              class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
+              View Writings on BaltimorePostExaminer.com<i class="fas fa-arrow-right ml-2"></i>
+            </button>
+      </article>
+      <article class="flex flex-col shadow my-4 w-full">
+        <img class="h-64 object-contain" src="https://miro.medium.com/fit/c/1360/1360/2*PhCY5lR977GiXx5r0TyZ1g.jpeg">
+        <div class="bg-white flex flex-col justify-start p-6">
+          <p href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">Writing</p>
+          <p href="#" class="text-3xl font-bold pb-4">Contributions to NSC Medium Blog</p>
+          <p href="#" class="text-sm pb-3">
+            <b>New Sanctuary Coalition</b>,
+            Published throughout 2020
+          </p>
+          <p href="#" class="pb-6">Writings published in response to various happenings in the immigration advocacy
+            world.
+          </p>
+          <a href="https://medium.com/@newsanctuarycoalition/after-being-abused-tortured-by-ice-cameroonians-were-deported-back-to-danger-152080c57bb4"
+            class="text-base leading-relaxed mt-0 mb-0 text-blue-800">
+            After Being Abused & Tortured by ICE-Cameroonians Were Deported Back to Danger
+          </a>
+          <footer class="block text-blue-600 font-bold mb-4 underline hover:text-blue-500">
+            - <cite>NSC Medium Blog </cite>
+          </footer>
+          <a href="https://medium.com/@newsanctuarycoalition/be-a-human-being-c6a9b6e1bc88"
+            class="text-base leading-relaxed mt-0 mb-0 text-blue-800">
+            Be A Human Being: Reflection on Paying an Immigration Bond
+          </a>
+          <footer class="block text-blue-600 font-bold mb-4 underline hover:text-blue-500">
+            - <cite>NSC Medium Blog </cite>
+          </footer>
+          <a href="https://medium.com/@newsanctuarycoalition/save-sanctuary-252b94d91acf"
+            class="text-base leading-relaxed mt-0 mb-0 text-blue-800">
+            Save Sanctuary: Abolish ICE Now
+          </a>
+          <footer class="block text-blue-600 font-bold mb-4 underline">
+            - <cite>NSC Medium Blog </cite>
+          </footer>
+      </article>
+
+    </section>
+
+    <!-- Sidebar Section -->
+    <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
+
+      <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+        <div class="flex flex-wrap justify-center">
+          <div class="flex flex-wrap justify-center">
+            <div class="w-6/12 sm:w-4/12 px-2">
+              <img src="https://preston-d.s3.amazonaws.com/headshot.jpg" alt="..."
+                class="shadow rounded-full max-w-full h-auto align-middle border-none" />
+            </div>
+          </div>
+        </div>
+        <p class="text-xl font-semibold pb-5">About Preston</p>
+        <p class="pb-2">Innovative self-starter with over 7 years of service dedicated to increasing awareness
+          and participation in cultural, religious, political and social issues of importance to citizens of
+          the U.S. and abroad. Experienced relationship builder, fundraiser, program leader, counselor, and
+          multi-instrument musician with extensive international network, including bilingual abilities in
+          English and Hebrew. Recipient of the Rabbi Jill Kreitman Homiletics Prize.</p>
+        <a href="#"
+          class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
+          Get in touch
+        </a>
+      </div>
+      <!-- <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+                <p class="text-xl font-semibold pb-5">Photos</p>
+                <div class="grid grid-cols-3 gap-3">
+                    <img class="hover:opacity-75" src="https://preston-d.s3.amazonaws.com/headshot.jpg">
+                    <img class="hover:opacity-75" src="https://preston-d.s3.amazonaws.com/marching-guitar.jpg">
+                    <img class="hover:opacity-75" src="https://preston-d.s3.amazonaws.com/muslim-jewish-peace.jpg">
+                    <img class="hover:opacity-75" src="https://preston-d.s3.amazonaws.com/stop-ice.jpg">
+                    <img class="hover:opacity-75" src="https://preston-d.s3.amazonaws.com/stop-wn-march.png">
+                    <img class="hover:opacity-75" src="https://preston-d.s3.amazonaws.com/temple.jpg">
+                    <img class="hover:opacity-75" src="https://preston-d.s3.amazonaws.com/union.png">
+                    <img class="hover:opacity-75" src="https://preston-d.s3.amazonaws.com/wedding.png">
+                </div>
+                <a href="#"
+                    class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
+                    <i class="fab fa-instagram mr-2"></i> View More
+                </a>
+            </div> -->
+
+    </aside>
+
+  </div>
+  <!-- Footer -->
+  <footer class="w-full border-t bg-white pb-12">
+    <div class="w-full container mx-auto flex flex-col items-center">
+      <div class="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
+        <a href="./index.html" class="uppercase px-3">Home</a>
+        <a href="./contact.html" class="uppercase px-3">Contact Preston</a>
+      </div>
+      <div class="uppercase pb-6">&copy; PrestonDNeimeisser.com</div>
+    </div>
+  </footer>
+  <script>PDFObject.embed("./pdf/faith-leader-11-20.pdf", "#faith-leader-11-20")</script>
+</body>
+
+</html>
