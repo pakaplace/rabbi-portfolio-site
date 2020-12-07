@@ -182,6 +182,11 @@
             class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
             View or Print PDF <i class="fas fa-arrow-right ml-2"></i>
           </button>
+          <button target="_blank"
+            onClick="window.open('https://us02web.zoom.us/rec/share/EOw4LYSNdaqtFAxtCrHYTFRVniXPWbbKjPsJe8nWaIGhy0a6O6jRZ1JSDy73-Tet.LLCzcdGE9hXMfn-Y?startTime=1605920373000');"
+            class="w-full bg-teal-600 text-white font-bold text-sm uppercase rounded hover:bg-teal-500 flex items-center justify-center px-2 py-3 mt-4">
+            Watch Live Recording <i class="fas fa-video ml-2"></i>
+          </button>
       </article>
       <article class="flex flex-col shadow my-4 w-full">
         <!-- <div href="#" class="hover:opacity-75">
@@ -298,12 +303,12 @@
       <div class="uppercase pb-6">&copy; PrestonDNeimeiser.com</div>
     </div>
   </footer>
-  <script>PDFObject.embed("./pdf/sermon-highpoint-01-31.pdf", "#sermon-highpoint-01-31")</script>
-  <script>PDFObject.embed("./pdf/sermon-highpoint-02-20.pdf", "#sermon-highpoint-02-20")</script>
-  <script>PDFObject.embed("./pdf/shabbat-juneteenth.pdf", "#shabbat-juneteenth")</script>
-  <script>PDFObject.embed("./pdf/hh-sermon.pdf", "#hh-sermon")</script>
-  <script>PDFObject.embed("./pdf/rosh-hashana.pdf", "#rosh-hashana")</script>
-  <script>PDFObject.embed("./pdf/kol-nidre.pdf", "#kol-nidre")</script>
+  <script>PDFObject.embed("./pdf/sermon-highpoint-01-31.pdf", "#sermon-highpoint-01-31", { fallbackLink: false })</script>
+  <script>PDFObject.embed("./pdf/sermon-highpoint-02-20.pdf", "#sermon-highpoint-02-20", { fallbackLink: false })</script>
+  <script>PDFObject.embed("./pdf/shabbat-juneteenth.pdf", "#shabbat-juneteenth", { fallbackLink: false })</script>
+  <script>PDFObject.embed("./pdf/hh-sermon.pdf", "#hh-sermon", { fallbackLink: false })</script>
+  <script>PDFObject.embed("./pdf/rosh-hashana.pdf", "#rosh-hashana", { fallbackLink: false })</script>
+  <script>PDFObject.embed("./pdf/kol-nidre.pdf", "#kol-nidre", { fallbackLink: false })</script>
 </body>
 
 </html>
