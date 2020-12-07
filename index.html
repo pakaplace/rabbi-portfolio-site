@@ -36,17 +36,23 @@
         ha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous">
         </script>
     <script>
-        const cont = 1;
+        var prev = 1;
+        var limit = 7;
+        var stopLoop = false
         function loopSlider() {
             var xx = setInterval(function () {
-                const next = cont + 1
-                if (cont > 2) next = 1;
-                $(`#slider-${cont}`).fadeOut(400);
+                var next = prev + 1
+                if (stopLoop) return
+                console.log("prev", prev)
+                console.log("Next", next)
+                if (next > limit) next = 1;
+                $(`#slider-${prev}`).fadeOut(400);
+                $(`#sButton${prev}`).removeClass("bg-blue-800");
                 $(`#slider-${next}`).delay(400).fadeIn(400);
-                $(`#sButton${cont}`).removeClass("bg-blue-800");
-                $(`#sButton${next}`).addClass("bg-blue-800");
-            }, 4000);
+                $(`#sButton${next}`).addClass("bg-blue-800")
 
+                prev = next;
+            }, 4000);
         }
 
         function reinitLoop(time) {
@@ -54,37 +60,23 @@
             setTimeout(loopSlider(), time);
         }
 
-        function sliderButton1() {
-            $("#slider-2").fadeOut(400);
-            $("#slider-1").delay(400).fadeIn(400);
-            $("#sButton2").removeClass("bg-blue-800");
-            $("#sButton1").addClass("bg-blue-800");
-            reinitLoop(4000);
-            cont = 0
-
-        }
-
-        function sliderButton2() {
-            $("#slider-1").fadeOut(400);
-            $("#slider-2").delay(400).fadeIn(400);
-            $("#sButton1").removeClass("bg-blue-800");
-            $("#sButton2").addClass("bg-blue-800");
-            reinitLoop(4000);
-            cont = 1
+        function sliderButton(num = 1) {
+            if (num === prev) return;
+            $(`#slider-${prev}`).fadeOut(400);
+            $(`#slider-${num}`).delay(400).fadeIn(400);
+            $(`#sButton${prev}`).removeClass("bg-blue-800");
+            $(`#sButton${num}`).addClass("bg-blue-800");
+            prev = num
+            stopLoop = true
+            // reinitLoop(4000);
         }
 
         $(window).ready(function () {
-            $("#slider-2").hide();
-            $("#sButton1").addClass("bg-purple-800");
-
-
+            $(`#sButton1`).addClass("bg-blue-800");
+            for (var i = 2; i <= limit; i++) {
+                $(`#slider-${i}`).hide();
+            }
             loopSlider();
-
-
-
-
-
-
         });
 
 
@@ -173,24 +165,80 @@
                             <img src="https://preston-d.s3.amazonaws.com/temple.jpg" alt="..."
                                 class="shadow-lg rounded max-w-full h-auto align-middle border-none" />
                         </div>
-                        <p class="text-xl my-4 leading-none">In a temple</p>
+                        <p class="text-lg my-4 leading-none">Breathing new life into a Lithuanian synagogue through
+                            prayer</p>
                     </div>
                 </div>
-
                 <div id="slider-2" class="container w-full">
                     <div class="flex flex-col items-center justify-center">
                         <div class="w-3/4 sm:w-1/2 px-4">
                             <img src="https://preston-d.s3.amazonaws.com/union.jpg" alt="..."
                                 class="shadow-lg rounded max-w-full h-auto align-middle border-none" />
                         </div>
-                        <p class="text-xl my-4 leading-none">In a Union</p>
+                        <p class="text-lg my-4 leading-none">Protesting with my father and the union for voting rights
+                            at a rally November 18, 2000 at the state capitol in Tallahassee, Florida</p>
+                    </div>
+                </div>
+                <div id="slider-3" class="container w-full">
+                    <div class="flex flex-col items-center justify-center">
+                        <div class="w-3/4 sm:w-1/2 px-4">
+                            <img src="https://preston-d.s3.amazonaws.com/marching-guitar.jpg" alt="..."
+                                class="shadow-lg rounded max-w-full h-auto align-middle border-none" />
+                        </div>
+                        <p class="text-lg my-4 leading-none">Leading the Shabbat walk as Head Songleader of the URJ Camp
+                            Coleman</p>
+                    </div>
+                </div>
+                <div id="slider-4" class="container w-full">
+                    <div class="flex flex-col items-center justify-center">
+                        <div class="w-3/4 sm:w-1/2 px-4">
+                            <img src="https://preston-d.s3.amazonaws.com/muslim-jewish-peace.jpg" alt="..."
+                                class="shadow-lg rounded max-w-full h-auto align-middle border-none" />
+                        </div>
+                        <p class="text-lg my-4 leading-none">Standing in solidarity with the NYC Muslim community as
+                            they attend Friday prayers</p>
+                    </div>
+                </div>
+                <div id="slider-5" class="container w-full">
+                    <div class="flex flex-col items-center justify-center">
+                        <div class="w-3/4 sm:w-1/2 px-4">
+                            <img src="https://preston-d.s3.amazonaws.com/stop-ice.jpg" alt="..."
+                                class="shadow-lg rounded max-w-full h-auto align-middle border-none" />
+                        </div>
+                        <p class="text-lg my-4 leading-none">Protesting the NYC Palantir offices for their collaboration
+                            with ICE</p>
+                    </div>
+                </div>
+                <div id="slider-6" class="container w-full">
+                    <div class="flex flex-col items-center justify-center">
+                        <div class="w-3/4 sm:w-1/2 px-4">
+                            <img src="https://preston-d.s3.amazonaws.com/stop-wn-march.jpg" alt="..."
+                                class="shadow-lg rounded max-w-full h-auto align-middle border-none" />
+                        </div>
+                        <p class="text-lg my-4 leading-none">Marching with Jews for Racial and Economic Justice the day
+                            of Biden’s election</p>
+                    </div>
+                </div>
+                <div id="slider-7" class="container w-full">
+                    <div class="flex flex-col items-center justify-center">
+                        <div class="w-3/4 sm:w-1/2 px-4">
+                            <img src="https://preston-d.s3.amazonaws.com/wedding.jpg" alt="..."
+                                class="shadow-lg rounded max-w-full h-auto align-middle border-none" />
+                        </div>
+                        <p class="text-lg my-4 leading-none">Facilitating a Havdallah ceremony in honor of a wedding
+                            couple</p>
                     </div>
                 </div>
 
             </div>
-            <div class="flex justify-between w-12 mx-auto pb-2">
-                <button id="sButton1" onclick="sliderButton1()" class="bg-purple-400 rounded-full w-4 pb-2 "></button>
-                <button id="sButton2" onclick="sliderButton2() " class="bg-purple-400 rounded-full w-4 p-2"></button>
+            <div class="flex justify-between justify-center w-24 mx-auto pb-2">
+                <button id="sButton1" onclick="sliderButton(1)" class="bg-blue-400 rounded-full w-4 p-2"></button>
+                <button id="sButton2" onclick="sliderButton(2)" class="bg-blue-400 rounded-full ml-1 w-4 p-2"></button>
+                <button id="sButton3" onclick="sliderButton(3)" class="bg-blue-400 rounded-full ml-1 w-4 p-2"></button>
+                <button id="sButton4" onclick="sliderButton(4)" class="bg-blue-400 rounded-full ml-1 w-4 p-2"></button>
+                <button id="sButton5" onclick="sliderButton(5)" class="bg-blue-400 rounded-full ml-1 w-4 p-2"></button>
+                <button id="sButton6" onclick="sliderButton(6)" class="bg-blue-400 rounded-full ml-1 w-4 p-2"></button>
+                <button id="sButton7" onclick="sliderButton(7)" class="bg-blue-400 rounded-full ml-1 w-4 p-2"></button>
             </div>
             <container classs="w-full flex flex-col my-4 px-2">
                 <article class="flex flex-col my-4 p-4 bg\ite">
