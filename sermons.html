@@ -124,23 +124,65 @@
         <!-- <div href="#" class="hover:opacity-75">
           <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">
         </a> -->
-        <div id='sermon-highpoint-01-31'></div>
+        <div id='senior-sermon'></div>
         <div class="bg-white flex flex-col justify-start p-6">
           <p class="text-blue-700 text-sm font-bold uppercase pb-4">Sermon</p>
           <p class="text-3xl font-bold pb-4">Senior Sermon</p>
           <p class="text-sm pb-3">
-            <b>INSERT LOCATION</b>,
+            <b>High Point Congregation</b>,
             Delivered on January 2020
           </p>
           <p class="pb-6">Delivered in the forth-year of his rabbinical studies, Preston’s senior sermon is a
             powerful articulation and expression of the virtue of presence.</p>
-          <button onClick="window.open('./pdf/sermon-highpoint-01-31.pdf');"
+          <button onClick="window.open('./pdf/senior-sermon.pdf');"
             class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
             View or Print PDF <i class="fas fa-arrow-right ml-2"></i>
           </button>
           <button onClick="window.open('https://livestream.com/huc/events/8861719');"
             class="w-full bg-teal-600 text-white font-bold text-sm uppercase rounded hover:bg-teal-500 flex items-center justify-center px-2 py-3 mt-4">
             Watch Live Recording <i class="fas fa-video ml-2"></i>
+          </button>
+      </article>
+      <article class="flex flex-col shadow my-4 w-full">
+        <!-- <div href="#" class="hover:opacity-75">
+          <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">
+        </a> -->
+        <div id='sermon-11-20'></div>
+        <div class="bg-white flex flex-col justify-start p-6">
+          <p class="text-blue-700 text-sm font-bold uppercase pb-4">Sermon</p>
+          <p class="text-3xl font-bold pb-4">Sermon #1 for High Point Congregation</p>
+          <p class="text-sm pb-3">
+            <b>High Point Congregation</b>,
+            Delivered the Shabbat before Thanksgiving in November 2020,
+          </p>
+          <p class="pb-6">Preston invites the congregation to incorporate the middot we learn from our sacred
+            stories into our relationships today.</p>
+          <button onClick="window.open('./pdf/sermon-11-20.pdf');"
+            class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
+            View or Print PDF <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+          <button onClick="window.open('https://livestream.com/huc/events/8861719');"
+            class="w-full bg-teal-600 text-white font-bold text-sm uppercase rounded hover:bg-teal-500 flex items-center justify-center px-2 py-3 mt-4">
+            Watch Live Recording <i class="fas fa-video ml-2"></i>
+          </button>
+      </article>
+      <article class="flex flex-col shadow my-4 w-full">
+        <!-- <div href="#" class="hover:opacity-75">
+          <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">
+        </a> -->
+        <div id='sermon-highpoint-01-31'></div>
+        <div class="bg-white flex flex-col justify-start p-6">
+          <p class="text-blue-700 text-sm font-bold uppercase pb-4">Sermon</p>
+          <p class="text-3xl font-bold pb-4">Shabbat Sermon</p>
+          <p class="text-sm pb-3">
+            <b>High Point Congregation</b>,
+            Delivered on January 2020
+          </p>
+          <p class="pb-6">Preston’s commentary on Parshat Bo and our responsibility for reaching out to one another
+            across difference.</p>
+          <button onClick="window.open('./pdf/sermon-highpoint-01-31.pdf');"
+            class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
+            View or Print PDF <i class="fas fa-arrow-right ml-2"></i>
           </button>
       </article>
       <article class="flex flex-col shadow my-4 w-full">
@@ -181,11 +223,6 @@
           <button onClick="window.open('./pdf/shabbat-juneteenth.pdf');"
             class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
             View or Print PDF <i class="fas fa-arrow-right ml-2"></i>
-          </button>
-          <button target="_blank"
-            onClick="window.open('https://us02web.zoom.us/rec/share/EOw4LYSNdaqtFAxtCrHYTFRVniXPWbbKjPsJe8nWaIGhy0a6O6jRZ1JSDy73-Tet.LLCzcdGE9hXMfn-Y?startTime=1605920373000');"
-            class="w-full bg-teal-600 text-white font-bold text-sm uppercase rounded hover:bg-teal-500 flex items-center justify-center px-2 py-3 mt-4">
-            Watch Live Recording <i class="fas fa-video ml-2"></i>
           </button>
       </article>
       <article class="flex flex-col shadow my-4 w-full">
@@ -309,6 +346,8 @@
   <script>PDFObject.embed("./pdf/hh-sermon.pdf", "#hh-sermon", { fallbackLink: false })</script>
   <script>PDFObject.embed("./pdf/rosh-hashana.pdf", "#rosh-hashana", { fallbackLink: false })</script>
   <script>PDFObject.embed("./pdf/kol-nidre.pdf", "#kol-nidre", { fallbackLink: false })</script>
+  <script>PDFObject.embed("./pdf/senior-sermon.pdf", "#senior-sermon", { fallbackLink: false })</script>
+  <script>PDFObject.embed("./pdf/sermon-11-20.pdf", "#sermon-11-20", { fallbackLink: false })</script>
 </body>
 
 </html>
