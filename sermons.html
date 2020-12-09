@@ -13,15 +13,12 @@
   <!-- Tailwind -->
   <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700;800&display=swap');
-
     .font-header {
       font-family: spectral;
     }
-  </style>
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
 
     p {
       font-family: karla;
@@ -95,7 +92,8 @@
   <!-- Topic Nav -->
   <nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
     <div class="block sm:hidden">
-      <a href="#" class="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
+      <a href="./index.html"
+        class="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
         @click="open = !open">
         Home <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
       </a>
@@ -103,7 +101,7 @@
     <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
       <div
         class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm uppercase mt-0 px-6 py-2">
-        <a href="https://preston-d.s3.amazonaws.com/preston-resume.pdf" target="_blank"
+        <a href="https://preston-d.s3.amazonaws.com/Preston+Final+Resume.pdf" target="_blank"
           class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Resume</a>
         <a href="https://preston-d.s3.amazonaws.com/Preston-Neimeiser-Vision-Statement.pdf" target="_blank"
           class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Vision</a>
@@ -151,9 +149,9 @@
         <div id='sermon-11-20'></div>
         <div class="bg-white flex flex-col justify-start p-6">
           <p class="text-blue-700 text-sm font-bold uppercase pb-4">Sermon</p>
-          <p class="text-3xl font-bold pb-4">Sermon #1 for High Point Congregation</p>
+          <p class="text-3xl font-bold pb-4">Sermon on Parshat Toldot for B’nai Israel </p>
           <p class="text-sm pb-3">
-            <b>High Point Congregation</b>,
+            <b>High Point, NC Congregation</b>,
             Delivered the Shabbat before Thanksgiving in November 2020,
           </p>
           <p class="pb-6">Preston invites the congregation to incorporate the middot we learn from our sacred
@@ -162,7 +160,8 @@
             class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
             View or Print PDF <i class="fas fa-arrow-right ml-2"></i>
           </button>
-          <button onClick="window.open('https://livestream.com/huc/events/8861719');"
+          <button
+            onClick="window.open('https://us02web.zoom.us/rec/share/QFjnfUhjWNuSv826Vtb1p3ZaB1ATn4i6EkEZC8m61StW4yu9jfhMZNAW2wVPJZCI.t4Fm8fHQaWH12Szs?startTime=1605920373000');"
             class="w-full bg-green-600 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
             Watch Live Recording <i class="fas fa-video ml-2"></i>
           </button>
@@ -176,7 +175,7 @@
           <p class="text-blue-700 text-sm font-bold uppercase pb-4">Sermon</p>
           <p class="text-3xl font-bold pb-4">Shabbat Sermon</p>
           <p class="text-sm pb-3">
-            <b>High Point Congregation</b>,
+            <b>High Point, NC Congregation</b>,
             Delivered on January 2020
           </p>
           <p class="pb-6">Preston’s commentary on Parshat Bo and our responsibility for reaching out to one another
@@ -193,9 +192,9 @@
         <div id='sermon-highpoint-02-20'></div>
         <div class="bg-white flex flex-col justify-start p-6">
           <p class="text-blue-700 text-sm font-bold uppercase pb-4">Sermon</p>
-          <p class="text-3xl font-bold pb-4">Sermon #2 for High Point Congregation</p>
+          <p class="text-3xl font-bold pb-4">Sermon on Parshat Mishpatim for B’nai Israel </p>
           <p class="text-sm pb-3">
-            <b>High Point Congregation</b>,
+            <b>High Point, NC Congregation</b>,
             Delivered on February 2020
           </p>
           <p class="pb-6">Sermon for High Point February 2020: Preston incorporates learnings from leading a
@@ -294,7 +293,7 @@
         <div class="flex flex-wrap justify-center">
           <div class="flex flex-wrap justify-center mb-4">
             <div class="w-6/12 sm:w-4/12 px-2">
-              <img src="https://preston-d.s3.amazonaws.com/headshot.jpg" alt="..."
+              <img src="https://preston-d.s3.amazonaws.com/headshot.jpeg" alt="..."
                 class="shadow rounded-full max-w-full h-auto align-middle border-none" />
             </div>
           </div>
@@ -313,7 +312,7 @@
       <!-- <div class="w-full bg-white shadow flex flex-col my-4 p-6">
                 <p class="text-xl font-semibold pb-5">Photos</p>
                 <div class="grid grid-cols-3 gap-3">
-                    <img class="hover:opacity-75" src="https://preston-d.s3.amazonaws.com/headshot.jpg">
+                    <img class="hover:opacity-75" src="https://preston-d.s3.amazonaws.com/headshot.jpeg">
                     <img class="hover:opacity-75" src="https://preston-d.s3.amazonaws.com/marching-guitar.jpg">
                     <img class="hover:opacity-75" src="https://preston-d.s3.amazonaws.com/muslim-jewish-peace.jpg">
                     <img class="hover:opacity-75" src="https://preston-d.s3.amazonaws.com/stop-ice.jpg">
