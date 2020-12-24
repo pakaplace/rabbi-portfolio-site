@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sermons | Preston D Neimeiser</title>
+  <title>Sermons & Services | Preston D Neimeiser</title>
   <meta name="author" content="Parker Place">
   <meta name="description"
     content="Sermons from Preston D Neimeisser. Professional website and portfolio samples of Rabbi Preston D. Neimeiser">
@@ -83,7 +83,8 @@
         Preston D. Neimeiser
       </a>
       <p class="text-center text-lg text-gray-600">
-        Shalom! I'm Preston, a 5th year rabbinical student at HUC-JIR and student rabbi of the B’nai Israel Synagogue in
+        Shalom! I'm Preston, a faith fellow at the New Sanctuary Coalition, a 5th year rabbinical student at HUC-JIR and
+        student rabbi of the B’nai Israel Synagogue in
         High Point, North Carolina.
       </p>
     </div>
@@ -101,11 +102,13 @@
     <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
       <div
         class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm uppercase mt-0 px-6 py-2">
-        <a href="https://preston-d.s3.amazonaws.com/Preston+Final+Resume.pdf" target="_blank"
+        <a href="./index.html" target="_blank" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">About</a><a
+          href="https://preston-d.s3.amazonaws.com/Preston+Final+Resume.pdf" target="_blank"
           class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Resume</a>
+
         <a href="https://preston-d.s3.amazonaws.com/Preston-Neimeiser-Vision-Statement.pdf" target="_blank"
           class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Vision</a>
-        <a href="./sermons.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2 font-bold ">Sermons</a>
+        <a href="./sermons.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2 font-bold ">Sermons & Services</a>
         <a href="./lesson-plans.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Lesson Plans</a>
         <a href="./press-writings.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Press/Writings</a>
         <a href="./contact.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Contact Preston</a>
@@ -119,6 +122,25 @@
 
     <!-- Content Section REPLACE -->
     <section class="w-full md:w-2/3 flex flex-col items-center px-3">
+      <article class="flex flex-col shadow my-4 w-full">
+        <!-- <div href="#" class="hover:opacity-75">
+          <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">
+        </a> -->
+        <div id='senior-sermon'></div>
+        <div class="bg-white flex flex-col justify-start p-6">
+          <p class="text-blue-700 text-sm font-bold uppercase pb-4">Sermon</p>
+          <p class="text-3xl font-bold pb-4">Parshat Vayeishev Sermon</p>
+          <p class="text-sm pb-3">
+            <b>B’nai Israel Synagogugue High Point, NC </b>,
+            Delivered on August 2020
+          </p>
+          <p class="pb-6">Preston’s sermon at the B’nai Israel Synagogue in High Point, NC on Parshat Vayeishev and the
+            death penalty.</p>
+          <button onClick="window.open('./pdf/parshat.pdf');"
+            class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4">
+            View or Print PDF <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+      </article>
       <article class="flex flex-col shadow my-4 w-full">
         <!-- <div href="#" class="hover:opacity-75">
           <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">
@@ -146,7 +168,7 @@
         <!-- <div href="#" class="hover:opacity-75">
           <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">
         </a> -->
-        <div id='sermon-11-20'></div>
+        <div id='parshat'></div>
         <div class="bg-white flex flex-col justify-start p-6">
           <p class="text-blue-700 text-sm font-bold uppercase pb-4">Sermon</p>
           <p class="text-3xl font-bold pb-4">Sermon on Parshat Toldot for B’nai Israel </p>
@@ -340,6 +362,7 @@
       <div class="uppercase pb-6">&copy; PrestonDNeimeiser.com</div>
     </div>
   </footer>
+  <script>PDFObject.embed("./pdf/parshat.pdf", "#parshat", { fallbackLink: false })</script>
   <script>PDFObject.embed("./pdf/sermon-highpoint-01-31.pdf", "#sermon-highpoint-01-31", { fallbackLink: false })</script>
   <script>PDFObject.embed("./pdf/sermon-highpoint-02-20.pdf", "#sermon-highpoint-02-20", { fallbackLink: false })</script>
   <script>PDFObject.embed("./pdf/shabbat-juneteenth.pdf", "#shabbat-juneteenth", { fallbackLink: false })</script>
